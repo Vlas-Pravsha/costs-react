@@ -1,7 +1,7 @@
 import React from "react";
 import CostItem from "./CostItem";
-import "../UI/Card";
 import Card from "../UI/Card";
+import "./Costs.css";
 
 export default function Costs(props) {
   return (
