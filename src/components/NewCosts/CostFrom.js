@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import "./CostForm.css";
 
-export default function CostFrom() {
+export default function CostFrom(props) {
   const [inputName, setInputName] = useState("");
   const [inputAmount, setInputAmount] = useState("");
   const [inputDate, setInputDate] = useState("");
@@ -47,6 +47,7 @@ export default function CostFrom() {
       date: new Date(inputDate),
     };
 
+    props.onSaveCostData(costData);
     setInputName("");
     setInputAmount("");
     setInputDate("");
