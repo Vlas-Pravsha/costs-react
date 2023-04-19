@@ -42,7 +42,7 @@ export default function CostFrom(props) {
     event.preventDefault();
 
     const costData = {
-      name: inputName,
+      description: inputName,
       amount: inputAmount,
       date: new Date(inputDate),
     };
@@ -85,6 +85,9 @@ export default function CostFrom(props) {
           />
           <div className=".new-cost__actions"></div>
           <button type="submit">Добавить Расход</button>
+          <button type="button" onClick={props.onCancel}>
+            Отмена
+          </button>
         </div>
       </div>
     </form>
